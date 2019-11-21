@@ -1,5 +1,11 @@
 <div>
   <% @students.each do |student| %>
     <div><%= student.first_name + " " + student.last_name %></div>
+    <!-- <%= link_to "#{student.first_name} #{student.last_name}" , students_path(student) %> -->
+
+    <!-- <%= link_to student.to_s, student %> -->
+    <!-- https://www.rubyguides.com/2019/05/rails-link_to-method/ -->
+    <!-- or -->
+    <%= link_to student.to_s, student_path(student) %>
   <% end %>
 </div>
